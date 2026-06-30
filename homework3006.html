@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Blog</title>
+
+<style>
+body{
+    font-family: Arial;
+    background-color: lightgray;
+}
+
+.blog{
+    width: 600px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+}
+
+p::first-line{
+    font-weight: bold;
+}
+
+p::first-letter{
+    font-size: 30px;
+    color: red;
+}
+
+blockquote::before{
+    content: "“ ";
+    font-size: 25px;
+    color: blue;
+}
+
+a:link{
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover{
+    color: red;
+}
+
+.box{
+    display: flex;
+}
+
+h4 + h4{
+    color: white;
+    background-color: green;
+    padding: 5px;
+    margin-left: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="blog">
+
+<h1>My Blog</h1>
+
+<h3>Author: John</h3>
+
+<div class="box">
+    <h4>Heading 1</h4>
+    <h4>Heading 2</h4>
+</div>
+
+<p>
+This is my first blog post. I am learning HTML and CSS. It is easy to create web pages using simple tags and styles.
+</p>
+
+<blockquote>
+Learning never stops.
+</blockquote>
+
+<a href="https://example.com">Read More</a>
+
+</div>
+
+</body>
+</html>
