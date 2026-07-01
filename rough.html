@@ -1,23 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  background-color: lightgreen;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Blogs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+        }
 
-@media only screen and (orientation: landscape) {
-  body {
-    background-color: lightblue;
-  }
-}
-</style>
+        #featured {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .blogs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .post {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        img[src$=".jpg"] {
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+
+        .post h3 {
+            padding: 15px 15px 5px;
+            margin: 0;
+            color: #222;
+        }
+
+        .post p {
+            padding: 0 15px;
+            color: #666;
+        }
+
+        a[href^="https"] {
+            color: red;
+        }
+
+        .readmore {
+            display: block;
+            text-align: center;
+            margin: 15px;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .blogs {
+                display: block;
+            }
+            body {
+                font-size: 14px;
+            }
+            .post img {
+                height: 160px;
+            }
+        }
+
+        @media (orientation: portrait) {
+            #featured {
+                background-color: lightyellow;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div id="featured">
+        <h2>Featured Blog Section</h2>
+        
+        <div class="blogs">
+            <div class="post">
+                <img src="https://picsum.photos/id/1015/800/600.jpg" alt="Blog 1">
+                <h3>Learning Web Development</h3>
+                <p>Simple tips for beginners to start coding.</p>
+                <a href="https://example.com/blog1" class="readmore">Read More</a>
+            </div>
 
-<p>Resize the browser window. When the width of this document is larger than the height, 
-the background color is "light blue", otherwise it is "light green".</p>
+            <div class="post">
+                <img src="https://picsum.photos/id/201/800/600.jpg" alt="Blog 2">
+                <h3>Why Design Matters</h3>
+                <p>Understanding the importance of good design.</p>
+                <a href="https://example.com/blog2" class="readmore">Read More</a>
+            </div>
 
+            <div class="post">
+                <img src="https://picsum.photos/id/237/800/600.jpg" alt="Blog 3">
+                <h3>Daily Productivity Tips</h3>
+                <p>Easy ways to stay focused every day.</p>
+                <a href="https://example.com/blog3" class="readmore">Read More</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
